@@ -11,9 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 mongoose
-  .connect(
-    "mongodb+srv://syedebad:ebad123@cluster0-xt32z.mongodb.net/My_Users?retryWrites=true&w=majority"
-  )
+  .connect("mongodb://localhost/counter")
   .then(() => console.log("mongo db connected"))
   .catch(err => console.log(err));
 
